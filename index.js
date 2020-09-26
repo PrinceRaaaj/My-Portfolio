@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 app.set("view engine", "ejs");
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 app.use(bodyParser.json());
 
@@ -63,7 +63,7 @@ app.get('/', (req, res) => {
 
 
 app.get(`/${process.env.CREATE_URL}`, (req, res)=>{
-    res.render("createPortfolio");
+    res.render("createPortfolio", {CREATE_URL: process.env.CREATE_URL});
 });
 
 
