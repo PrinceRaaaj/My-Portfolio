@@ -2,44 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Uploading</title>
+    <%- include("head.ejs") %>
+    <link rel="stylesheet" href="css/createPortfolio.css">
 </head>
 
 <body>
-    <h1>To Upload Image on mongoDB</h1>
+    <h1>Add Projects to Portfolio</h1>
     <hr>
     <div>
         <form action="/<%= CREATE_URL%>" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><label for="name">Title</label></td>
+                    <td><input type="text" id="name" placeholder="Name"
+                        value="" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="name">Technology</label></td>
+                    <td><input type="text" id="technology" placeholder="Technology"
+                        value="" name="technology" required></td>
+                </tr>
+                <tr>
+                    <td><label for="desc">Description</label></td>
+                    <td><textarea id="description" name="description" value="" rows="4"
+                        required>
+               </textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="desc">Link</label></td>
+                    <td><input type="text" id="link" placeholder="Link"
+                        value="" name="link" required></td>
+                </tr>
+                <tr>
+                    <td><label for="image">Upload Image</label></td>
+                    <td><input type="file" id="image"
+                        name="image" value="" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+            
             <div>
-              <label for="name">Title</label>
-              <input type="text" id="name" placeholder="Name"
-                     value="" name="name" required>
+              
+              
             </div>
             <div>
-                <label for="name">Technology</label>
-                <input type="text" id="technology" placeholder="Name"
-                       value="" name="technology" required>
+                
+                
             </div>
             <div>
-                <label for="desc">Description</label>
-                <textarea id="description" name="description" value="" rows="4"
-                          placeholder="Description" required>
-                </textarea>
+                
+                
             </div>
             <div>
-                <label for="desc">Link</label>
-                <input type="text" id="link" placeholder="Link"
-                       value="" name="link" required>
+                
+                
             </div>
             <div>
-                <label for="image">Upload Image</label>
-                <input type="file" id="image"
-                       name="image" value="" required>
+                
+                
             </div>
             <div>
-                <button type="submit">Submit</button>
+                
             </div>
         </form>
     </div>
